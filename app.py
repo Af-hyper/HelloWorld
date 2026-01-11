@@ -1,8 +1,23 @@
+intro = input("Please choose (add, subtract, multiply, divide): ")
+first_number = float(input("Please enter your number: "))
+second_number = float(input("Please enter your second number: "))
 
-early_temp = int(input("Early Temperature:  "))
-last_temp = int(input("Last Temperature:  "))
-change_in_temp = int(last_temp - early_temp)
-alpha_aluminium = float(0.0000128)
-L = int(input("L: "))
-thermal_expansion = (alpha_aluminium * L * change_in_temp )
-print(f"Thermal expansion is: {thermal_expansion} mm ")
+if intro == "add":
+    result = first_number + second_number
+    print(f"{first_number} + {second_number} = {result}")
+elif intro == "subtract":
+    result = first_number - second_number
+    print(f"{first_number} - {second_number} = {result}")
+elif intro == "multiply":
+    result = first_number * second_number
+    print(f"{first_number} * {second_number} = {result}")
+elif intro == "divide":
+    if second_number == 0:
+        print("Error cannot divide by zero")
+    else:
+     result = first_number / second_number
+    print(f"{first_number} / {second_number} = {result}")
+else:
+    print("Error please choose from add, subtract, multiply, divide")
+
+
